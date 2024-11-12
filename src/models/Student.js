@@ -9,7 +9,7 @@ const studentSchema = new Schema({
     studentId: { 
       type: String,
       unique: true,
-      default: () => Math.random().toString(36).substr(2, 9).toUpperCase() // Generate a random ID
+      default: () => Math.random().toString(36).substr(2, 9).toUpperCase() 
     },
     grade: {
       type: String,

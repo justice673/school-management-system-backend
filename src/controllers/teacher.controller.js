@@ -23,7 +23,7 @@ exports.getAllTeachers = async (req, res) => {
 // Update a teacher
 exports.updateTeacher = async (req, res) => {
   try {
-    const teacher = await Teacher.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    const teacher = await Teacher.findByIdAndUpdate(req.params.teacherId, req.body, { new: true });
     res.json(teacher);
   } catch (error) {
     res.status(400).json({ error: error.message });
