@@ -1,4 +1,3 @@
-// controllers/course.controller.js
 const Course = require('../models/Course');
 
 // Create a new course
