@@ -4,7 +4,7 @@ const validateForm = (req, res, next) => {
     const schema = Joi.object({
         first_name: Joi.string().min(3).max(10).required(),
         last_name: Joi.string().min(3).max(10).required(),
-        username: Joi.string().min(3).max(10).required(),
+        username: Joi.string().min(3).max(20).required(),
         email: Joi.string().email().required(),
         password: Joi.string().min(8).max(20).required(),
         password_confirm: Joi.string().valid(Joi.ref('password')).required().messages({

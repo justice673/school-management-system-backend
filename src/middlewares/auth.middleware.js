@@ -13,7 +13,6 @@ const verifyLoginBody = async (req, res, next) => {
         });
     }
 
-    // Check if a user with the provided email exists in the database
     const user = await authService.verifyIfIsUnique('email', body.email);
     
     // Log the result of the user search to confirm retrieval
